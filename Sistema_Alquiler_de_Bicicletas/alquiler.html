@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alquiler de bicicletas - RentaBici</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <a class="encabezado__volver" id="volver" href="menu_usuario.html" aria-label="Volver al menú principal" title="Volver">
+      <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <circle cx="18" cy="11" r="6.5"/>
+        <path d="M4.5 33c0-7.5 6-12.5 13.5-12.5S31.5 25.5 31.5 33"/>
+      </svg>
+    </a>
+    <h1 class="encabezado__titulo encabezado__titulo--largo">Alquiler de bicicletas</h1>
+  </header>
+
+  <main class="formulario-pagina">
+    <form id="formulario-alquiler" class="formulario formulario--estrecho formulario--alquiler" novalidate>
+
+      <div class="campo">
+        <label for="estacion">Estación</label>
+        <select class="entrada" id="estacion" required>
+          <option value="" disabled selected></option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="tipo">Tipo Bicicleta</label>
+        <select class="entrada" id="tipo" required>
+          <option value="" disabled selected></option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <span class="campo__titulo" id="titulo-fecha">Fecha</span>
+        <div class="fecha" role="group" aria-labelledby="titulo-fecha">
+          <input class="entrada" type="number" id="dia" placeholder="Día" min="1" max="31" inputmode="numeric" aria-label="Día">
+          <input class="entrada" type="number" id="mes" placeholder="Mes" min="1" max="12" inputmode="numeric" aria-label="Mes">
+          <input class="entrada" type="number" id="anio" placeholder="Año" min="2000" max="2100" inputmode="numeric" aria-label="Año">
+        </div>
+      </div>
+
+      <p id="mensaje" class="mensaje" role="status" aria-live="polite"></p>
+
+      <button class="boton boton--auto" id="continuar" type="submit">Continuar</button>
+
+    </form>
+  </main>
+
+  <script src="js/datos.js"></script>
+  <script src="js/sesion.js"></script>
+  <script src="js/avisos.js"></script>
+  <script src="js/alquiler.js"></script>
+</body>
+</html>

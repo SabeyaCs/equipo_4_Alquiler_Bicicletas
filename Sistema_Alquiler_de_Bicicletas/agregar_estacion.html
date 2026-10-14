@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agregar estación - RentaBici</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <!-- Ícono de persona: vuelve a Control de estaciones -->
+    <a class="encabezado__volver" id="volver" href="gestion_estaciones.html" aria-label="Volver a Control de estaciones" title="Volver">
+      <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <circle cx="18" cy="11" r="6.5"/>
+        <path d="M4.5 33c0-7.5 6-12.5 13.5-12.5S31.5 25.5 31.5 33"/>
+      </svg>
+    </a>
+    <h1 class="encabezado__titulo encabezado__titulo--largo">Control de estaciones</h1>
+  </header>
+
+  <main class="formulario-pagina">
+    <form id="formulario-estacion" class="formulario formulario--estrecho">
+
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input class="entrada" type="text" id="nombre" name="nombre" placeholder="Estación x" autocomplete="off" required>
+      </div>
+
+      <div class="campo">
+        <label for="ubicacion">Ubicación</label>
+        <input class="entrada" type="text" id="ubicacion" name="ubicacion" placeholder="Ubicación" autocomplete="off" required>
+      </div>
+
+      <div class="campo">
+        <label for="cantidad">Cantidad</label>
+        <input class="entrada" type="number" id="cantidad" name="cantidad" placeholder="0000" min="1" step="1" inputmode="numeric" required>
+      </div>
+
+      <p id="mensaje" class="mensaje" role="status" aria-live="polite"></p>
+
+      <button class="boton" id="confirmar" type="submit">Confirmar</button>
+
+    </form>
+  </main>
+
+  <script src="js/datos.js"></script>
+  <script src="js/sesion.js"></script>
+  <script src="js/agregar_estacion.js"></script>
+</body>
+</html>

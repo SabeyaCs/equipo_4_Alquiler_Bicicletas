@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión - RentaBici</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <a class="encabezado__volver" href="index.html" aria-label="Volver a la página principal">
+      <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <circle cx="18" cy="11" r="6.5"/>
+        <path d="M4.5 33c0-7.5 6-12.5 13.5-12.5S31.5 25.5 31.5 33"/>
+      </svg>
+    </a>
+    <h1 class="encabezado__titulo encabezado__titulo--largo">Inicia Sesión en Rentabici</h1>
+  </header>
+
+  <main class="formulario-pagina">
+    <form id="formulario-login" class="formulario formulario--centrado">
+
+      <input class="entrada" type="text" id="identificador" name="identificador" placeholder="Correo Electrónico o usuario" aria-label="Correo electrónico o usuario" autocomplete="username" required>
+
+      <input class="entrada" type="password" id="contrasena" name="contrasena" placeholder="Contraseña" aria-label="Contraseña" autocomplete="current-password" required>
+
+      <p id="mensaje" class="mensaje" role="status" aria-live="polite"></p>
+
+      <button class="boton" type="submit">Iniciar Sesión</button>
+
+    </form>
+  </main>
+
+  <script src="js/datos.js"></script>
+  <script src="js/autenticacion.js"></script>
+  <script src="js/sesion.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

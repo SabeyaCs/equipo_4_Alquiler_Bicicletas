@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fallas Reportadas - RentaBici</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <a class="encabezado__volver" id="volver" href="menu_tecnico.html" aria-label="Volver al menú principal" title="Volver">
+      <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <circle cx="18" cy="11" r="6.5"/>
+        <path d="M4.5 33c0-7.5 6-12.5 13.5-12.5S31.5 25.5 31.5 33"/>
+      </svg>
+    </a>
+    <h1 class="encabezado__titulo encabezado__titulo--largo">Fallas Reportadas</h1>
+
+    <!-- Ícono de guardar: aplica los cambios sin salir de la página -->
+    <button class="encabezado__guardar" id="guardar" type="button" aria-label="Guardar cambios" title="Guardar cambios">
+      <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6 5h20l5 5v21a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/>
+        <path d="M11 5v8h13V5"/>
+        <rect x="10" y="20" width="16" height="12" rx="1"/>
+      </svg>
+    </button>
+  </header>
+
+  <main class="estaciones-pagina">
+    <div class="tabla-contenedor">
+      <table class="tabla-estaciones">
+        <thead>
+          <tr>
+            <th scope="col">Id bicicleta</th>
+            <th scope="col">Estación</th>
+            <th scope="col">Falla</th>
+          </tr>
+        </thead>
+        <!-- Las filas se generan en js/fallas_reportadas.js -->
+        <tbody id="cuerpo-tabla"></tbody>
+      </table>
+    </div>
+
+    <p id="mensaje" class="mensaje mensaje--centrado" role="status" aria-live="polite"></p>
+  </main>
+
+  <script src="js/datos.js"></script>
+  <script src="js/sesion.js"></script>
+  <script src="js/avisos.js"></script>
+  <script src="js/fallas_reportadas.js"></script>
+</body>
+</html>

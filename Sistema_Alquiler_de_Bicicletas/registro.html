@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - RentaBici</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <a class="encabezado__volver" href="index.html" aria-label="Volver a la página principal">
+      <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <circle cx="18" cy="11" r="6.5"/>
+        <path d="M4.5 33c0-7.5 6-12.5 13.5-12.5S31.5 25.5 31.5 33"/>
+      </svg>
+    </a>
+    <h1 class="encabezado__titulo encabezado__titulo--largo">Crea una nueva cuenta en Rentabici</h1>
+  </header>
+
+  <main class="formulario-pagina">
+    <form id="formulario-registro" class="formulario">
+
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <div class="campo__fila">
+          <input class="entrada" type="text" id="nombre" name="nombre" placeholder="Nombre" autocomplete="given-name" required>
+          <input class="entrada" type="text" id="apellidos" name="apellidos" placeholder="Apellidos" autocomplete="family-name" aria-label="Apellidos" required>
+        </div>
+      </div>
+
+      <div class="campo">
+        <label for="email">Correo Electrónico</label>
+        <input class="entrada" type="email" id="email" name="email" placeholder="Correo Electrónico" autocomplete="email" required>
+      </div>
+
+      <div class="campo__fila campo__fila--iguales">
+        <div class="campo">
+          <label for="contrasena">Contraseña</label>
+          <input class="entrada" type="password" id="contrasena" name="contrasena" placeholder="Contraseña" autocomplete="new-password" required>
+        </div>
+
+        <div class="campo">
+          <label for="documento">Documento</label>
+          <input class="entrada" type="text" id="documento" name="documento" placeholder="Documento" inputmode="numeric" autocomplete="off" required>
+        </div>
+      </div>
+
+      <p id="mensaje" class="mensaje" role="status" aria-live="polite"></p>
+
+      <div class="campo--medio">
+        <button class="boton" type="submit">Registrarse</button>
+      </div>
+
+    </form>
+  </main>
+
+  <script src="js/datos.js"></script>
+  <script src="js/autenticacion.js"></script>
+  <script src="js/registro.js"></script>
+</body>
+</html>

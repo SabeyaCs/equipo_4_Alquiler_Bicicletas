@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Administrador - RentaBici</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body data-rol="1">
+
+  <header class="encabezado">
+    <!-- El ícono cierra la sesión y vuelve a la página principal -->
+    <a class="encabezado__volver" id="cerrar-sesion" href="index.html" aria-label="Cerrar sesión y volver a la página principal" title="Cerrar sesión">
+      <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <circle cx="18" cy="11" r="6.5"/>
+        <path d="M4.5 33c0-7.5 6-12.5 13.5-12.5S31.5 25.5 31.5 33"/>
+      </svg>
+    </a>
+    <h1 class="encabezado__titulo encabezado__titulo--largo">Bienvenido a Rentabici</h1>
+  </header>
+
+  <main class="menu-pagina">
+    <!-- Las opciones se generan en js/menu.js según el rol -->
+    <nav id="menu-opciones" class="menu" aria-label="Opciones del menú"></nav>
+  </main>
+
+  <script src="js/datos.js"></script>
+  <script src="js/sesion.js"></script>
+  <script src="js/avisos.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>
